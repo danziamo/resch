@@ -37,13 +37,13 @@
     "coveralls": "^3.0.0",
     "eslint": "^4.11.0",
     "http-server": "^0.10.0",
-    "immutability-helper": "^2.5.0",
+    "immutability-helper": "^2.6.0",
     "jsof": "^0.3.0",
     "mocha": "^4.0.1",
     "normalize.css": "^7.0.0",
     "nyc": "^11.3.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "dependencies": {
     "lodash.clonedeep": "^4.5.0",
