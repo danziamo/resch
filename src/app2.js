@@ -8,6 +8,12 @@ const React = require('react')
     // , rockData = require('./rock-data')
     ;
 
+update.extend('$auto', function(value, object) {
+  return object ?
+    update(object, value):
+    update({}, value);
+});
+
 // const m1 = {
 //     type: 'object',
 //     properties: {
@@ -80,7 +86,14 @@ const t3 = {
     type: 'object',
     properties: {
         abc: {type: 'string'},
-        xyz: {type: 'string'}
+        xyz: {type: 'string'},
+        ololo: {
+            type: 'object',
+            properties: {
+                aaa: {type: 'string'},
+                bbb: {type: 'string'}
+            }
+        }
     }
 };
 
@@ -90,7 +103,7 @@ const $ = React.createElement;
 const desc = Object.assign({}, resch);
 
 desc.oneOf = resch.__oneOf(schema => data =>
-    (schema.properties.type.enum[0] === data.type)
+    (data && schema.properties.type.enum[0] === data.type)
 );
 
 const genForm = resch.__form(React)(desc);
