@@ -79,7 +79,8 @@ m012.oneOf[1].properties.properties.additionalProperties = m012;
 const t3 = {
     type: 'object',
     properties: {
-        abc: {type: 'string'}
+        abc: {type: 'string'},
+        xyz: {type: 'string'}
     }
 };
 
